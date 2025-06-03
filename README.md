@@ -1,5 +1,3 @@
-Calls to Mistral AI.
+This is the local version of TallyGo 
 
-Done in python
-
-when run it creates and returns json file.
+Intructions for use will be updated later
