@@ -94,7 +94,4 @@ async def main():
 
     print("✅ Done — Results saved to all_results.json")
 
-start_time= time.time()
-asyncio.run(main())
 
-print("time taken:" + str(time.time()-start_time))
