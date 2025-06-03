@@ -1,2 +1,2 @@
 Please enter your mistral ai api key on the next line
-Key:nEjPf4PIZa8SWjC5j0XUPIUK2o1aKvRk
+Key:"replace with value"
