@@ -1,0 +1,207 @@
+[
+    {
+        "reg_id": "12345",
+        "id_letter": "A",
+        "vote_id": "123"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "B",
+        "vote_id": "401"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "C",
+        "vote_id": "892"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "D",
+        "vote_id": "345"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "E",
+        "vote_id": "718"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "G",
+        "vote_id": "172"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "H",
+        "vote_id": "131"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "I",
+        "vote_id": "798"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "J",
+        "vote_id": "653"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "F",
+        "vote_id": "449"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "FA",
+        "vote_id": "139"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "FB",
+        "vote_id": "932"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "FC",
+        "vote_id": "101"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "FD",
+        "vote_id": "009"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "FE",
+        "vote_id": "610"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "FF",
+        "vote_id": "961"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "FG",
+        "vote_id": "321"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "FH",
+        "vote_id": "254"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "K",
+        "vote_id": "578"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "KA",
+        "vote_id": "216"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "KB",
+        "vote_id": "277"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "KC",
+        "vote_id": "986"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "L",
+        "vote_id": "676"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "M",
+        "vote_id": "453"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "N",
+        "vote_id": "233"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "O",
+        "vote_id": "944"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "P",
+        "vote_id": "996"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "PA",
+        "vote_id": "678"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "Q",
+        "vote_id": "221"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "QA",
+        "vote_id": "132"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "R",
+        "vote_id": "166"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "RA",
+        "vote_id": "393"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "S",
+        "vote_id": "030"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "T",
+        "vote_id": "001"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "U",
+        "vote_id": "002"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "V",
+        "vote_id": "696"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "W",
+        "vote_id": "013"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "WA",
+        "vote_id": "150"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "X",
+        "vote_id": "209"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "Y",
+        "vote_id": "123"
+    },
+    {
+        "reg_id": "12345",
+        "id_letter": "YA",
+        "vote_id": "420"
+    }
+]

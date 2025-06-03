@@ -1,0 +1,6 @@
+Please enter database information here. Do not change formatting.
+User:root
+Password:SuperDuperSecurePassword
+Hostname:127.0.0.1
+Database:icastdb
+Do not change anything except "replace with value"
