@@ -20,9 +20,9 @@ class datadoer:
             self.cursor = self.cnx.cursor()
         
 
-    def write(self, data):
+    def write(self, data, table):
         try:
-            self.cursor.executemany("INSERT INTO prodvote VALUES (%s, %s, %s)", data)
+            self.cursor.executemany(f"INSERT INTO {table} VALUES (%s, %s, %s)", data)
             self.cnx.commit()
 
         except Error as err:
