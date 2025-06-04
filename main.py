@@ -3,6 +3,12 @@ import imageai
 import time
 import asyncio
 
+def info():
+    print("Welcome to TallyGo! \n" 
+          "Before you continue please make sure you have read ALL of the instructions provided\n" 
+          "This application is not very intuitive to setup")
+
+
 
 def start():
     valid = False
@@ -26,25 +32,34 @@ def start():
         close()
 
 def image_extract():
+    print("This may take a while")
 
     start_time= time.time()
     asyncio.run(imageai.main())
     print("time taken:" + str(time.time()-start_time))
 
     print("You should check the response for accuracy before entering it into your database!")
-    
     start()
 
 def enter_to_database():
+    print("Are you sure you want to enter all information in the file 'all_results.json' into the database?")
+    db = datadoer()
+
+    db.write(db.convertjson("all_results.json"))
+    start()
+
+def validation():
+    print("Currently non-functional")
     start()
 
 def close():
-    print("Thank you for using TallyGo")
+    print("Thank you for using TallyGo :)")
     quit()
 
-print("Welcome to TallyGo!")
-start()
+#-------------------------------------------------
 
+
+start()
 
 
 

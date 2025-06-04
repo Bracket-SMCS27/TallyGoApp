@@ -47,6 +47,7 @@ async def aicall_limited(image_path):
                     "text": (
                         "This image is of a ballot which has been filled in. Return the REG ID number and the vote ID number for each product. "
                         "Only return the reg_id number, id letter, and vote id number."
+                        "the vote id should always be 3 digits no matter what. If you there is a partial id, fill the slot with a 0."
                         "Respond in the following JSON format:\n"
                         '{ "reg_id": "12456", "id_letter": "A", "vote_id": "123"}\n'
                         "Do not include any extra explanation or commentary—just output a valid JSON only."
@@ -107,7 +108,7 @@ async def main():
     with open("all_results.json", "w") as f:
         json.dump(clean_data, f, indent=4)
 
-    print("✅ Done — Results saved to all_results.json")
+    print("Done — Results saved to all_results.json")
   
 
 

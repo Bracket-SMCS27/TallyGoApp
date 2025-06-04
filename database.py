@@ -12,6 +12,8 @@ class datadoer:
             host = lines[3].split(':', 1)[1].strip()
             database = lines[4].split(':', 1)[1].strip()
 
+            print(user + password + host + database)
+
             self.cnx = connection.MySQLConnection(user=user, password=password,
                                                     host=host,
                                                     database= database)
