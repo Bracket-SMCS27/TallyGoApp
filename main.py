@@ -2,14 +2,40 @@ from database import datadoer
 import imageai
 import time
 import asyncio
+import os
 
 votetable = ""
 
+def dbWriteHelper():
+    db = datadoer()
+
+    # Set root folder path
+    root_folder = 'output_folder'
+    table = 'prodvote'
+    
+  
+    for dirpath, dirnames, filenames in os.walk(root_folder):
+        for filename in filenames:
+            if filename.endswith('.json'):
+                json_path = os.path.join(dirpath, filename)
+                try:
+                    records = db.convertjson(json_path)
+                    if records:
+                        db.write(records, table)
+                        print(f"Inserted {len(records)} records from {json_path}")
+                    else:
+                        print(f"No records in {json_path}")
+                except Exception as e:
+                    print(f"Error processing {json_path}: {e}")
+    db.close()
+
+
+#-------------------------------------------------------------------------------------------------
 
 def info():
     print("Welcome to TallyGo! \n" 
-          "Before you continue please make sure you have read ALL of the instructions provided\n" 
-          "This application is not very intuitive to setup")
+        "Before you continue please make sure you have read ALL of the instructions provided\n" 
+        "This application is not very intuitive to setup")
 
 
 
@@ -59,14 +85,17 @@ def enter_to_database():
             valid = True
 
     if(response == "Y" or response == "y"):
-        db = datadoer()
-        db.write(db.convertjson("all_results.json"))
+        dbWriteHelper()
         start()
     else:
         start()
 
 def validation():
     print("Currently non-functional")
+
+    db = datadoer()
+    db.validate_folder("output_folder")
+
     start()
 
 def close():
@@ -77,6 +106,3 @@ def close():
 
 
 start()
-
-
-

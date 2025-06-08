@@ -64,16 +64,24 @@ async def aicall_limited(image_path):
     await rate_queue.get()  # Wait for rate limiter token
 
     try:
-        loop = asyncio.get_event_loop()
-        response = await loop.run_in_executor(
-            None, partial(client.chat.complete, model=model, messages=messages)
-        )
-        content = response.choices[0].message.content.strip("`'\"").strip("json")
-        print(f"{image_path} processed")
-        return {"image": image_path, "data": json.loads(content)}
+            response = await asyncio.to_thread(client.chat.complete, model=model, messages=messages)
+            content = response.choices[0].message.content.strip("`'\"").strip("json")
+            data = json.loads(content)
+
+            # Save to file
+            image_name = os.path.splitext(os.path.basename(image_path))[0]
+            output_path = os.path.join("output_folder", f"{image_name}.json")
+            with open(output_path, "w") as f:
+                json.dump(data, f, indent=4)
+
+            print(image_name + "Proccesed")
+
+            return {"image": image_path, "data": data}
+
     except Exception as e:
-        print(f"Error processing {image_path}: {e}")
         return {"image": image_path, "error": str(e)}
+    
+    
 # === Load all images ===
 def get_image_paths(folder="images"):
     return [
@@ -84,31 +92,17 @@ def get_image_paths(folder="images"):
 
 # === Main async runner ===
 async def main():
-    image_paths = get_image_paths()
-    print(f"Found {len(image_paths)} images.")
-    
- 
+    os.makedirs("output_folder", exist_ok=True)
+
+    # Start the rate limiter loop in the background
     asyncio.create_task(rate_limiter_loop(rate_queue))
 
-
+    image_paths = get_image_paths()
     tasks = [aicall_limited(path) for path in image_paths]
-    results = await asyncio.gather(*tasks)
 
- 
-    clean_data = []
-    for item in results:
-        if "data" in item:
-            data = item["data"]
-            if isinstance(data, list):
-                clean_data.extend(data)
-            else:
-                clean_data.append(data)
+    await asyncio.gather(*tasks)
 
-   
-    with open("all_results.json", "w") as f:
-        json.dump(clean_data, f, indent=4)
+    print("✅ Done — Individual JSON files saved to 'output/'")
 
-    print("Done — Results saved to all_results.json")
-  
 
 
